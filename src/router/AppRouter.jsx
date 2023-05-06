@@ -9,6 +9,8 @@ import NavBar from "../components/NavBar";
 
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
+import CustomersPage from "../pages/CustomersPage";
+import CustomerPage from "../pages/CustomerPage";
 
 const AppRouter = () => {
   return (
@@ -19,6 +21,8 @@ const AppRouter = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/customers" element={<CustomersPage />} />
+            <Route path="/customers/:id" element={<CustomerPage />} />
 
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
