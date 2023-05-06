@@ -5,6 +5,8 @@ import {
   Navigate,
 } from "react-router-dom";
 
+import NavBar from "../components/NavBar";
+
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 
@@ -12,12 +14,15 @@ const AppRouter = () => {
   return (
     <>
       <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
+        <NavBar />
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
 
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
+            <Route path="/*" element={<Navigate to="/" />} />
+          </Routes>
+        </div>
       </Router>
     </>
   );
